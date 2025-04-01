@@ -1,0 +1,16 @@
+spring:
+  batch:
+    jdbc:
+      initialize-schema: always
+    job:
+      names: ${job.name:NONE}
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springbatch?characterEncoding=UTF-8&serverTimezone=UTC&rewriteBatchedStatements=true
+    username: root
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+    defer-datasource-initialization: true
+    show-sql: true
