@@ -1,12 +1,9 @@
 server:
-  port: 8081
+  port: 8080
 
 spring:
-  batch:
-    jdbc:
-      initialize-schema: always
-    job:
-      names: ${job.name:NONE}
+  application:
+    name: inflearn
   datasource:
     url: jdbc:mysql://localhost:3306/springbatch?characterEncoding=UTF-8&serverTimezone=UTC&rewriteBatchedStatements=true
     driver-class-name: com.mysql.cj.jdbc.Driver
