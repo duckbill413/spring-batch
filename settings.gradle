@@ -1,3 +1,4 @@
 rootProject.name = 'spring-batch'
 include 'fastcampus'
 include 'inflearn:session2'
+include 'inflearn:session3'

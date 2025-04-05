@@ -1,4 +1,4 @@
-package wh.duckbill.session2;
+package wh.duckbill.inflearn;
 
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.boot.SpringApplication;
@@ -11,10 +11,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 @EnableBatchProcessing
-public class Session2Application {
+public class SpringBatchApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(Session2Application.class, args);
+    SpringApplication.run(SpringBatchApplication.class, args);
   }
 
 }
