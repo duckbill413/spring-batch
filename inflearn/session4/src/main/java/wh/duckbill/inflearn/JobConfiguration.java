@@ -40,11 +40,6 @@ public class JobConfiguration {
   @Bean
   public Step step2() {
     return stepBuilderFactory.get("step2")
-        .tasklet((stepContribution, chunkContext) -> {
-          log.info("step2 was executed");
-          JobParameters jobParameters = stepContribution.getStepExecution().getJobExecution().getJobParameters();
-          jobParameters.getParameters().forEach((key, value) -> log.info("{} : {}", key, value));
-          return RepeatStatus.FINISHED;
-        }).build();
+        .tasklet(new CustomTasklet()).build();
   }
 }
