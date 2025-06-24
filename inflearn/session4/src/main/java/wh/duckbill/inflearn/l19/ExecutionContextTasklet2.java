@@ -7,9 +7,10 @@ import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ExecutionContextTasklet1 implements Tasklet {
+public class ExecutionContextTasklet2 implements Tasklet {
   @Override
   public RepeatStatus execute(StepContribution stepContribution, ChunkContext chunkContext) throws Exception {
+    System.out.println("step2 was executed");
     return RepeatStatus.FINISHED;
   }
 }
