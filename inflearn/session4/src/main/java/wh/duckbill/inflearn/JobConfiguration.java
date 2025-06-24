@@ -3,7 +3,6 @@ package wh.duckbill.inflearn;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobParameters;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
@@ -19,13 +18,13 @@ public class JobConfiguration {
   private final JobBuilderFactory jobBuilderFactory;
   private final StepBuilderFactory stepBuilderFactory;
 
-  @Bean
-  public Job job() {
-    return jobBuilderFactory.get("job")
-        .start(step1())
-        .next(step2())
-        .build();
-  }
+//  @Bean
+//  public Job job() {
+//    return jobBuilderFactory.get("job")
+//        .start(step1())
+//        .next(step2())
+//        .build();
+//  }
 
   @Bean
   public Step step1() {

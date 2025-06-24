@@ -2,14 +2,10 @@ package wh.duckbill.inflearn;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.batch.core.Job;
-import org.springframework.batch.core.JobParameters;
-import org.springframework.batch.core.JobParametersBuilder;
 import org.springframework.batch.core.launch.JobLauncher;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
-
-import java.util.UUID;
 
 /**
  * 섹션 4. 스프링 배치 도메인 이해
@@ -24,10 +20,10 @@ public class JobRunner implements ApplicationRunner {
 
   @Override
   public void run(ApplicationArguments args) throws Exception {
-    JobParameters jobParameters = new JobParametersBuilder()
-        .addString("key", UUID.randomUUID().toString())
-        .addString("name", "duckbill")
-        .toJobParameters();
-    jobLauncher.run(job, jobParameters);
+//    JobParameters jobParameters = new JobParametersBuilder()
+//        .addString("key", UUID.randomUUID().toString())
+//        .addString("name", "duckbill")
+//        .toJobParameters();
+//    jobLauncher.run(job, jobParameters);
   }
 }
